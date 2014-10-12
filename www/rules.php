@@ -60,10 +60,10 @@
             <div><span class="rules_heading">New Rules and Rule Changes for this semester</span></div>
              <div><LI>Starve timers remain at 60 hours maximum.
              <LI>Feeds are worth 48 hours.
-             <LI>We have created a <a href="http://goo.gl/hn9fN2">play area map</a>to define campus boundaries and no play zones!
+             <LI>We have created a <a href="http://goo.gl/hn9fN2">play area map</a> to define campus boundaries and no play zones!
              <LI>A new opt out of receiving feed shares to play as a zombie in hard mode. Make it to the end with this and earn a badge!
              <LI>New sections for Bandana, and transportation rules. See sections below.
-             <LI></div>
+             </div>
   
               
           </div>
@@ -88,16 +88,16 @@
 
           <div class="odd">
              <div><span class="rules_heading">Safety Rules</span></div>
-             
+             <div>Rules created for the safety of all players are strictly enforced. Violation of safety rules may result in a removal and ban from the game, even on the first occurrence and without prior warning.</div>
+
              <div><OL class="rules">
-                Rules created for the safety of all players are strictly enforced. Violation of safety rules may result in a removal and ban from the game, even on the first occurrence and without prior warning.
                 
                 <LI>No realistic looking weaponry. All Nerf devices must be inspected by a mod before the game. Approved devices will be marked with a zip-tie as proof they've been inspected. Using a Nerf device that hasn't been inspected will result in removal from the game.
                 <LI>Game devices may not be visible inside of academic buildings or jobs on campus (i.e. Nerf Devices). Make sure they are tucked away entirely, with no handles showing, etc.
                 <LI>Nerf markers must not hurt on impact. (If you're not sure about this, ask a moderator).
                 <LI>Play inside buildings is strictly forbidden. Doing so will result in removal from the game. The exception to this is around doorways.
                 <LI>Common Sense. If something seems excessively dangerous, don't do it.
-                <LI>Stairs are safe for humans only. Zombies can be stunned on stairs, humans can not be tagged as long as they have at least one foot on the stairs. To count as stairs, there must be <a href="http://i.imgur.com/NeCVwFa.jpg">three vertical faces.</a>
+                <LI>Stairs are safe for humans only. Zombies can be stunned on stairs, humans can not be tagged as long as they have at least one foot on the stairs. To count as stairs, there must be <a href="img/stairs.jpg">three vertical faces.</a>
                 <LI>Doorways:
                 <OL class="rules">
                 <LI>A human is safe if they have at least one foot within the doorway
@@ -224,7 +224,7 @@
             </UL></div>
         
             <div>All blasters must be checked at orientatons. Nerf devices must not look realistic. Federal law requires that toy blasters have a brightly colored tip. We require blasters to be obviously brightly colored - if we think it's too realistic looking, it can't be used. If you're in doubt, ask a mod ahead of time. Please don't paint blasters completely black or other colors found on realistic weaponry. We'll have spray-paint at the orientations to help you make sure your nerf blasters meet standards. All devices except socks and marshmallows must be approved by a Moderator prior to use. Approved devices will be marked as such by a zip-tie.  Projectiles must not hurt on impact.</div>
-            <div>Blasters may be modded. However, they must still fall under the aforementioned guidelines.
+            <div>Blasters may be modded. However, they must still fall under the aforementioned guidelines.</div>
             <div>Nerf blasters cannot fire anything except foam projectiles such as darts or balls. Socks must be clean. Socks must be thrown; they can be modified, but only by adding more socks.</div>
             <div>Only commercially available, off-the-shelf darts may be used in nerf blasters. For safety reasons, darts may not be modified to affect their flight performance in any way.</div>
             <div>All ammunition must be cleaned up by whoever fired it. Don't leave darts and marshmallows and socks lying around. Be respectful of campus - ours is a beautiful one, let's keep it that way.</div>
@@ -269,7 +269,8 @@
                 <LI>Skateboards & Longboards: You are out of play while on one, moving or not.
                 <LI>Rollerskates & Rollerblades: You are out of play while they are on your feet. We ask players to please not use them during the game unless it is absolutely necessary.
                 <LI>Segways: If you are standing on one, you are out of play.
-          
+              </OL></div>
+          </div>
           <div class="even">
             <div><span class="rules_heading">Rule Violations</span></div>
             <div>In the case where a rule has been violated, moderators will make a decision on the appropriate course of action. Most of the time, this is simply a warning, or nothing at all. For more serious occurrances, the rules head and or executive council may be involved. Possible actions include, but are not limited to:</div>
