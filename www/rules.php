@@ -60,7 +60,7 @@
             <div><span class="rules_heading">New Rules and Rule Changes for this semester</span></div>
              <div><LI>Starve timers remain at 60 hours maximum.
              <LI>Feeds are worth 48 hours.
-             <LI>We have created a <a href="http://goo.gl/hn9fN2">play area map</a> to define campus boundaries and no play zones!
+             <LI>We have created a <a href="http://goo.gl/hn9fN2"><span class="accent_color">play area map</span></a> to define campus boundaries and no play zones!
              <LI>A new opt out of receiving feed shares to play as a zombie in hard mode. Make it to the end with this and earn a badge!
              <LI>New sections for Bandana, and transportation rules. See sections below.
              </div>
@@ -97,7 +97,7 @@
                 <LI>Nerf markers must not hurt on impact. (If you're not sure about this, ask a moderator).
                 <LI>Play inside buildings is strictly forbidden. Doing so will result in removal from the game. The exception to this is around doorways.
                 <LI>Common Sense. If something seems excessively dangerous, don't do it.
-                <LI>Stairs are safe for humans only. Zombies can be stunned on stairs, humans can not be tagged as long as they have at least one foot on the stairs. To count as stairs, there must be <a href="img/stairs.jpg">three vertical faces.</a>
+                <LI>Stairs are safe for humans only. Zombies can be stunned on stairs, humans can not be tagged as long as they have at least one foot on the stairs. To count as stairs, there must be <a href="img/stairs.jpg"><span class="accent_color">three vertical faces.</span></a>
                 <LI>Doorways:
                 <OL class="rules">
                 <LI>A human is safe if they have at least one foot within the doorway
@@ -123,7 +123,7 @@
               <LI>Exceptions: outdoor class, ROTC, work, transporting heavy/fragile/expensive equipment (does not include laptops in a backpack), physical injury. If you feel you have an exception activity, please contact the mods.
               </OL>
               <LI>Game bandana's must be worn at minimum several minute prior to exiting a building. Placing on a bandana, then exiting several seconds later to chase/escape a player will result in disciplinary action. We encourage players to wear bandanas inside as much as possible! 
-              <LI>Game bandana's must be clearly visable in a 360° manner (i.e. from all angles). Do not fold them lengthwise to make them thinner. Tape may be used to repair damaged edges.
+              <LI>Game bandana's must be clearly visable in a 360 degree manner (i.e. from all angles). Do not fold them lengthwise to make them thinner. Tape may be used to repair damaged edges.
               <LI>Game bandana's cannot color-match clothing.
               <LI>Game bandana's from previous game may be worn. However, the current game's bandana must be worn and be the most visible.
             </OL></div>
@@ -181,7 +181,7 @@
           <div class="even">
             <div><span class="rules_heading">Locations</span></div>
             <div>Areas on campus that are safe to play in and not listed as a Safe Zone or No-Play Zone are fair game.</div>
-            <div><a href="http://goo.gl/hn9fN2">Click here</a> to see what is defined as on and off campus, in addition to construction areas, non-crossable campus borders, mod locations, and unique buildings.</div>
+            <div><a href="http://goo.gl/hn9fN2"><span class="accent_color">Click here</span></a> to see what is defined as on and off campus, in addition to construction areas, non-crossable campus borders, mod locations, and unique buildings.</div>
           </div>
 
           <div class="odd">
