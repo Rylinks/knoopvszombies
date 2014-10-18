@@ -36,7 +36,7 @@
           {
             foreach ($playerArray as $player)
             {
-              if ($player['status'] == 'zombie' && $player['uid'] != $_SESSION['uid'])
+              if ($player['status'] == 'zombie' && $player['uid'] != $_SESSION['uid'] && !$player['share_optout'])
               {
                 if (($GLOBALS['state']['oz_hidden'] && !$player['oz']) || !$GLOBALS['state']['oz_hidden'])
                 {
@@ -68,7 +68,7 @@
           {
             foreach ($playerArray as $player)
             {
-              if ($player['status'] == 'zombie' && $player['uid'] != $_SESSION['uid'])
+              if ($player['status'] == 'zombie' && $player['uid'] != $_SESSION['uid'] && !$player['share_optout'])
               {
                 if (($GLOBALS['state']['oz_hidden'] && !$player['oz']) || !$GLOBALS['state']['oz_hidden'])
                 {

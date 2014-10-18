@@ -26,7 +26,16 @@
       else
       {
         $_POST['oz_pool'] = '0';
-      }  
+      }
+  
+      if (isset($_POST['share_optout']) && $_POST['share_optout'] == 'on')
+      {
+        $_POST['share_optout'] = '1';
+      }
+      else
+      {
+        $_POST['share_optout'] = '0';
+      }
 
       if (isset($_POST['attended_orientation']) && $_POST['attended_orientation'] == 'on')
       {
@@ -194,6 +203,21 @@
               }
               break;
 
+            case 'share_optout':
+              $save[$key] = $value;
+              if ($user_game[$key] != $value)
+              {
+                if ($value)
+                {
+                  $email_changes['Kill Sharing Optout'] = 'Yes';
+                }
+                else
+                {
+                  $email_changes['Kill Sharing Optout'] = 'No';
+                }
+              }
+              break;
+
             case 'attended_orientation':
               $save[$key] = $value;
               if ($user_game[$key] != $value)
@@ -337,6 +361,14 @@
     </div>
   </div>
 
+   <div class="admin_playerlist_edit_row_container">
+    <div class="admin_playerlist_edit_row_label">
+    Feedshare Optout:
+    </div>
+    <div class="admin_playerlist_edit_row_form">
+      <input type="checkbox" name="share_optout" <?php if ($user_game['share_optout']) echo 'checked'; ?> />
+    </div>
+  </div>
   <div class="admin_playerlist_edit_row_container">
     <div class="admin_playerlist_edit_row_label">
     Attended Orientation:

@@ -402,6 +402,13 @@ class Game {
     return true;
   }
   
+  function ToggleFeedOpt($gid, $uid)
+  {
+    $user = $GLOBALS['User']->GetUserFromGame($uid, $gid);
+    $value = ($user['share_optout'] ? '0' : '1');
+    $GLOBALS['User']->UpdateUserGameColumn($gid, $uid, 'share_optout', $value);
+    return true;
+  }
   /**
   *
   * Removes a player from a game
@@ -611,6 +618,7 @@ class Game {
               gx.zombie_kills, 
               gx.zombied_time, 
               gx.zombie_feed_timer,
+              gx.share_optout,
               u.name, 
               u.email,
               u.fb_id, 
@@ -722,12 +730,13 @@ class Game {
     // Check that feed1 is a player
     if ($GLOBALS['User']->IsValidUser($feed1))
     {
-      $sql = "SELECT game_xref.uid, game_xref.status, game_xref.zombie_feed_timer, game_xref.zombied_time, user.name FROM game_xref LEFT JOIN user ON game_xref.uid = user.uid WHERE user.uid='$feed1' AND gid='$gid'";
+      $sql = "SELECT game_xref.uid, game_xref.status, game_xref.zombie_feed_timer, game_xref.zombied_time, game_xref.share_optout, user.name FROM game_xref LEFT JOIN user ON game_xref.uid = user.uid WHERE user.uid='$feed1' AND gid='$gid'";
 
       $results = $GLOBALS['Db']->GetRecords($sql);
       $share = $results[0];
       $time_given = $time - $share['zombie_feed_timer'];
       $time_given = ($time_given > $feed_time ? $feed_time : $time_given);
+      if ($share['share_optout']){$time_given = 0;} //user is trying to cheat
       if ($time_given >0){
         $sql = "UPDATE game_xref SET zombie_feed_timer=zombie_feed_timer + $time_given WHERE gid='$gid' AND uid='$feed1'";
         if (!$GLOBALS['Db']->Execute($sql))
@@ -738,7 +747,8 @@ class Game {
         $feed_time -= $time_given;
         $user=$GLOBALS['User']->GetUser($feed1);
         $email = $user['email']; 
-        $text = "Hello\r\nYou have recieved a feed share.";
+        $text = "Hello\r\nYou have recieved a feed share. You now starve out at ".
+                       date("Y-d-m H:i:s", $share['zombie_feed_timer'] + $time_given + ZOMBIE_MAX_FEED_TIMER);
         $GLOBALS['Mail']->SimpleMail($email, UNIVERSITY." HVZ Feed Share", $text);
         $cache_id = $feed1.'_game';
         $GLOBALS['UserCache']->RemoveFromCache($cache_id);
@@ -748,14 +758,14 @@ class Game {
     // Check that feed2 is a player
     if ($GLOBALS['User']->IsValidUser($feed2))
     {
-      $sql = "SELECT game_xref.uid, game_xref.status, game_xref.zombie_feed_timer, game_xref.zombied_time, user.name FROM game_xref LEFT JOIN user ON game_xref.uid = user.uid WHERE user.uid='$feed2' AND gid='$gid'";
+      $sql = "SELECT game_xref.uid, game_xref.status, game_xref.zombie_feed_timer, game_xref.zombied_time, game_xref.share_optout, user.name FROM game_xref LEFT JOIN user ON game_xref.uid = user.uid WHERE user.uid='$feed2' AND gid='$gid'";
 
       $results = $GLOBALS['Db']->GetRecords($sql);
       $share = $results[0];
       $time_given = $time - $share['zombie_feed_timer'];
       $time_given = ($time_given > $feed_time ? $feed_time : $time_given);
-
     
+      if ($share['share_optout']){$time_given = 0;} //user is trying to cheat
       if ($time_given >0){
         $sql = "UPDATE game_xref SET zombie_feed_timer=zombie_feed_timer + $time_given WHERE gid='$gid' AND uid='$feed2'";
         if (!$GLOBALS['Db']->Execute($sql))
@@ -766,7 +776,8 @@ class Game {
         $feed_time -= $time_given;
         $user=$GLOBALS['User']->GetUser($feed2);
         $email = $user['email'];
-        $text = "Hello\r\nYou have recieved a feed share.";
+        $text = "Hello\r\nYou have recieved a feed share. You now starve out at ".
+                       date("Y-d-m H:i:s", $share['zombie_feed_timer'] + $time_given + ZOMBIE_MAX_FEED_TIMER);
         $GLOBALS['Mail']->SimpleMail($email, UNIVERSITY." HVZ Feed Share", $text);
         $cache_id = $feed2.'_game';
         $GLOBALS['UserCache']->RemoveFromCache($cache_id);

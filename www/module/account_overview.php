@@ -96,6 +96,17 @@
     <div class="clearfix"></div>
   </div>
   <?php endif ?>
+  <?php if ($show_feedopt): ?>
+   <div class="content_row">
+    <div class="content_row_label">
+      Feedshare Status:
+    </div>
+    <div class="content_row_data">
+      <?php echo $view_feedopt ?>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <?php endif ?>
   <div class="content_row">
     <div class="content_row_label">
       Lifetime kills as zombie:

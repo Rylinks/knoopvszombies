@@ -64,6 +64,8 @@ RewriteRule ^oauth/init$ signup.php?step=5&state=auth&%{QUERY_STRING} [L]
 RewriteRule ^emailconfirm$ signup.php?step=2 [L]
 RewriteRule ^emailconfirm/([^/.]+)$ signup.php?step=2&confirm=$1 [L]
 
+RewriteRule ^togglefeed$ togglefeed.php [L]
+
 RewriteRule ^session$ session.php [L]
 RewriteRule ^session/([^/.]+)$ session.php?type=$1 [L]
 RewriteRule ^session/([^/.]+)/([^/.]+)$ session.php?type=$1&param=$2 [L]

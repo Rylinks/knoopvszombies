@@ -82,6 +82,13 @@
 			}
     }
     
+    $show_feedopt = false;
+    $feedopt = false;
+    if ($viewing_self && $GLOBALS['User']->IsPlayingCurrentGame($user['uid']) && $GLOBALS['state']) {
+      $show_feedopt = true;
+      $view_feedopt = ($game_xref['share_optout'] ? "Not Accepting Feedshares" : "Accepting Feedshares");
+      if (($game_xref['share_optout'] || !$GLOBALS['state']['active']) && !$GLOBALS['state']['archive']) {$view_feedopt .= ' (<a class="accent_color" href="//'.DOMAIN.'/togglefeed">Toggle</a>)';}
+    }
     if (isset($historical['zombie_kills']))
       $view_zombie_kills = $historical['zombie_kills'];
     else
