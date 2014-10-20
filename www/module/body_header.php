@@ -82,7 +82,7 @@
     <?php else: ?>
 
       <div id="body_header_message">
-      Need to get ahold of a Moderator? <a href="mailto:mods@osundead.com">Contact us via email at mods@osundead.com</a>
+      Need to contact a Moderator? <a href="mailto:mods@osundead.com">Email us at mods@osundead.com</a>
       </div>
     
     <?php endif ?>
