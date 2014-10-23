@@ -619,6 +619,7 @@ class Game {
               gx.zombied_time, 
               gx.zombie_feed_timer,
               gx.share_optout,
+              gx.attended_orientation,
               u.name, 
               u.email,
               u.fb_id, 
