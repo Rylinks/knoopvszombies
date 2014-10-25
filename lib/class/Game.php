@@ -673,7 +673,7 @@ class Game {
       $target_uid = $results[0]['uid'];
       $target_user = $GLOBALS['User']->GetUser($target_uid);
       $feed_type = 'player';
-      $feed_time = ZOMBIE_MAX_FEED_TIMER;
+      $feed_time = ZOMBIE_KILL_TIME;
     }
     elseif (is_array($fcresults) && count($fcresults) > 0) {
       $target_fid = $fcresults[0]['fid'];
