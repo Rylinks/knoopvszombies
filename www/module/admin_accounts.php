@@ -141,6 +141,11 @@
               }
               break;
 
+            case 'notes':
+             //I'm doing it here instead of below because it's in a separate table and shouldn't be emailed. Sue me.
+             $GLOBALS['User']->UpdateNotes($user['uid'], $value);
+             break;
+
             case 'forum_privileges':
               $save[$key] = $value;
               if ($user[$key] != $value)
@@ -178,7 +183,8 @@
                       throw new Exception('Error updating user.');
                     }
                     break;
-                    break;
+                  break;
+
                 }
                 
                 // Do the DB transactions here, remove the permission row, it will get updated next time they login
@@ -463,6 +469,15 @@
     </div>
     <div class="admin_playerlist_edit_row_form">
       <input type="checkbox" name="notify">
+    </div>
+  </div>
+
+  <div class="admin_playerlist_edit_row_container">
+    <div class="admin_playerlist_edit_row_label">
+    Notes:
+    </div>
+    <div class="admin_playerlist_edit_row_form">
+      <textarea id='notes' name="notes" style="width: 300px; height: 150px;" ><? echo $GLOBALS['User']->GetNotes($user['uid']); ?></textarea>
     </div>
   </div>
 

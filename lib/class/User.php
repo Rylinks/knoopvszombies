@@ -1121,7 +1121,7 @@ class User {
     
   }
   */
-  
+ 
   /*
   * Gets an array of player data paged and for the given gid
   *
@@ -1467,6 +1467,42 @@ class User {
     
   }
   
+  /*
+  * Retrives notes on a user account
+  *
+  */
+  function GetNotes($uid)
+  {
+    $uid = addslashes($uid);
+    $sql = "SELECT notes from notes where uid = '$uid'";
+    $results = $GLOBALS['Db']->GetRecords($sql);
+    if (is_array($results) && count($results) > 0) {
+      $notes = $results[0];
+      return $notes['notes'];
+    }
+    return '';
+  }
+
+  /*
+  * Changes notes on a user account
+  *
+  */
+  function UpdateNotes($uid, $notes)
+  {
+    //check if notes already exists
+    $sql = "SELECT EXISTS (SELECT * FROM notes WHERE uid = '$uid')";
+    $results = $GLOBALS['Db']->GetRecords($sql);
+    if (is_array($results) && count($results) > 0) {
+      $exists = $results[0];
+      $exists = reset($exists);
+    }
+    if ($exists == 1) {
+      $sql = "UPDATE notes SET notes = '$notes' WHERE uid = '$uid'";
+    } elseif ($notes != '') {
+      $sql = "INSERT INTO notes (uid, notes) VALUES('$uid', '$notes')";
+    }
+    $GLOBALS['Db']->Execute($sql);
+  }
   /*
   * Removes a UID from the zombie forum role and adds them to the human role
   *
