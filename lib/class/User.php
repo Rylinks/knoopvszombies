@@ -1489,6 +1489,7 @@ class User {
   */
   function UpdateNotes($uid, $notes)
   {
+    $notes = mysql_real_escape_string($notes);
     //check if notes already exists
     $sql = "SELECT EXISTS (SELECT * FROM notes WHERE uid = '$uid')";
     $results = $GLOBALS['Db']->GetRecords($sql);
