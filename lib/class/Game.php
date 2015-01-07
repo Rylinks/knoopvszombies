@@ -619,6 +619,7 @@ class Game {
               gx.zombied_time, 
               gx.zombie_feed_timer,
               gx.share_optout,
+              gx.attended_orientation,
               u.name, 
               u.email,
               u.fb_id, 
@@ -672,7 +673,7 @@ class Game {
       $target_uid = $results[0]['uid'];
       $target_user = $GLOBALS['User']->GetUser($target_uid);
       $feed_type = 'player';
-      $feed_time = ZOMBIE_MAX_FEED_TIMER;
+      $feed_time = ZOMBIE_KILL_TIME;
     }
     elseif (is_array($fcresults) && count($fcresults) > 0) {
       $target_fid = $fcresults[0]['fid'];
@@ -1388,21 +1389,20 @@ class Game {
           
           // Now we need to email everyone that the game has officially begun
           $allPlayers = $this->GetPlayers($game['gid'], 'all', null, null, null);
+          $subject = "".UNIVERSITY." HvZ {$game['name']} Has Officially Begun!";
+          $html = "Hello,<br>This email is to inform you that the Humans vs. Zombies {$game['name']} has officially begun! Remember you must carry two Game IDs and bandanna with you at all times. Good Luck.";
+          $text = "Hello,\r\nThis email is to inform you that the Humans vs. Zombies {$game['name']} has officially begun! Remember you must carry two Game IDs and bandanna with you at all times. Good Luck.";
           if (is_array($allPlayers))
           {
-            $to = '';
             foreach ($allPlayers as $player)
             {
-              $to .= $player['email'].',';
+              $to = $player['email'];
+              $GLOBALS['Mail']->HTMLMail($to, $subject, $html, $text, true, false);
             }
           }
           
           // Now send them an email
-          $subject = "".UNIVERSITY." HvZ {$game['name']} Has Officially Begun!";
-          $html = "Hello,<br>This email is to inform you that the Humans vs. Zombies {$game['name']} has officially begun! Remember you must carry two Game IDs and bandanna with you at all times. Good Luck.";
-          $text = "Hello,\r\nThis email is to inform you that the Humans vs. Zombies {$game['name']} has officially begun! Remember you must carry two Game IDs and bandanna with you at all times. Good Luck.";
              
-          $GLOBALS['Mail']->HTMLMail($to, $subject, $html, $text, true, false);
           
           // mark game active
           $this->UpdateGameColumn($game['gid'], 'active', '1');
