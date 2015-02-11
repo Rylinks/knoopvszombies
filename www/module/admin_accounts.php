@@ -428,7 +428,7 @@
     </div>
     <div class="admin_playerlist_edit_row_caption">
       <input class="button" type="submit" value="Regular Mod" onclick="document.getElementById('privileges_form').value='playerlist,userapproval,'; return false;" />
-      <input class="button" type="submit" value="Head Mod" onclick="document.getElementById('privileges_form').value='playerlist,accounts,userapproval,gameplay,email,game,'; return false;" />
+      <input class="button" type="submit" value="Head Mod" onclick="document.getElementById('privileges_form').value='playerlist,accounts,userapproval,gameplay,email,game,feed,'; return false;" />
     </div>
   </div>
 
