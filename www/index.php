@@ -142,10 +142,10 @@
             
             <p>Human players must remain vigilant and defend themselves with socks and Nerf blasters to avoid being tagged by the growing zombie horde. Currently, Humans vs. Zombies is played at over 600 campuses across the United States!</p>
             
-            <p>Not convinced yet? Check out the <span class="accent_color bold">epic</span> documentary:</p>
+            <p>Not convinced yet? Check out the trailer:</p>
             
             <div id="what_is_video">
-            <object width="370" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="//vimeo.com/moogaloop.swf?clip_id=1956330&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=59a5d1&amp;fullscreen=1" /><embed src="//vimeo.com/moogaloop.swf?clip_id=1956330&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=59a5d1&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="370" height="225" /></object>
+            <object width="370" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><iframe width="370" height="208" src="https://www.youtube.com/embed/R_mONwFxACE" frameborder="0" allowfullscreen></iframe></object>
             </div>
             
             <p>(note: we recommend watching it full screen)</p>
