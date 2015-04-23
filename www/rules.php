@@ -51,19 +51,20 @@
                  
           <div class="odd">
             <div class="rules_header">Game <span class="accent_color">Rules</span></div>
-            <div>(last update: October 12th, 2014)</div>
+            <div>(last update: April 22, 2015)</div>
             <div>Humans vs. Zombies (HvZ) is a game of tag of epic proportions. There are two teams, the Human Resistance, and the Zombie Horde. All players begin as Humans, except one who is randomly chosen to be the Original Zombie (Players can opt out of being chosen as the Original Zombie). The Original Zombie tags Human players, turning them into Zombies. The Zombies must "feed" on a Human every 60 hours, by tagging them, or they starve to death and are out of the game. The Humans can defend themselves from the Zombies with various game approved equipment stated below.</div>
           </div>
 
           <div class="even">
 
             <div><span class="rules_heading">New Rules and Rule Changes for this semester</span></div>
-             <div><LI>Starve timers remain at 60 hours maximum.
-             <LI>Feeds are worth 48 hours.
-             <LI>We have created a <a href="http://goo.gl/hn9fN2"><span class="accent_color">play area map</span></a> to define campus boundaries and no play zones!
-             <LI>A new opt out of receiving feed shares to play as a zombie in hard mode. Make it to the end with this and earn a badge!
-             <LI>New sections for Bandana, and transportation rules. See sections below.
-             </div>
+              <LI>No entering/exiting foliage between the hours of 8pm and 7am. This has been established for safety reasons and concerns from the public.
+              <LI>No hiding in foliage at any time. However, during daylight hours bushes may be traversed through.
+              <LI>Blasters may not have any form of attachable barrel on them. In addition the Centurion is no longer permitted.
+              <LI>Upon exiting a doorway, a 10 foot safe zone is established until exited, reentering a building, or when players (in the bubble or not) countdown 10 seconds outloud. Rules for entering doors has not changed. See doorway section for details.
+              <LI>OZ timers can be reset after 12 minutes (i.e. 3 minutes until unstun) during full missions ONLY. Their total stun clock is still 15 minutes.
+              <LI>New section on doorways.
+              <LI>Play zone boundaries have changed slightly from last game to reflect construction projects. <a href="http://goo.gl/ejjzmv">See map here</a>.
   
               
           </div>
@@ -100,15 +101,19 @@
                 <LI>Stairs are safe for humans only. Zombies can be stunned on stairs, humans can not be tagged as long as they have at least one foot on the stairs. To count as stairs, there must be <a href="img/stairs.jpg"><span class="accent_color">three vertical faces.</span></a>
                 <LI>Doorways:
                 <OL class="rules">
+                <LI>Doorways function as the boundary between play areas and no play zones. Players must exercise caution around doorways. If the doorway is crowded with people, wait for them to move out of the way.
                 <LI>A human is safe if they have at least one foot within the doorway
                 <LI>A human is safe if, as they are entering the building, they have one hand on the door handle
                 <LI>If the door is locked, then you are only safe if you are able to open the door
                 <LI>Zombies are never safe in doorways
+                <LI>When a human exits a door, they are safe until they move more than ten feet away from the door. Any zombie nearby can remove the safety bubble by audibly counting out ten seconds. Once the zombie reaches zero, the human is no longer safe, and should probably run away or return to the building.
+                <LI>The purpose of the bubble is to reduce clogs around doors. Please use the safety to stand away from foot traffic and avoid blocking exits.
                 </OL>
                 <LI>Vehicles: Players on/in vehicles are outside of the game. They cannot be attacked, and cannot attack.  Players on roller blades are always safe because a push will cause them to move. (Please don't ride bikes, skateboards, or rollerblades at missions. You may use them to get to and from the mission location only).
                 <LI>Do not hide under cars (even if it is yours).
                 <LI>Do not under any cirumstances attempt to tag someone who isn't a player. Doing so will result in immediate removal from the game.
                 <LI>Play is forbidden 5 feet surrounding all construction zones (sidewalks are a good guide for distance).
+                <LI>No entering or exiting foliage between the hours of 8pm and 7am. Additionally, no hiding in foliage at any time. This has been established due to safety and concern from the public.
              </OL></div>
 
 
@@ -181,7 +186,7 @@
           <div class="even">
             <div><span class="rules_heading">Locations</span></div>
             <div>Areas on campus that are safe to play in and not listed as a Safe Zone or No-Play Zone are fair game.</div>
-            <div><a href="http://goo.gl/hn9fN2"><span class="accent_color">Click here</span></a> to see what is defined as on and off campus, in addition to construction areas, non-crossable campus borders, mod locations, and unique buildings.</div>
+            <div><a href="http://goo.gl/ejjzmv"><span class="accent_color">Click here</span></a> to see what is defined as on and off campus, in addition to construction areas, non-crossable campus borders, mod locations, and unique buildings.</div>
           </div>
 
           <div class="odd">
@@ -206,15 +211,16 @@
 
           <div class="odd">
             <div><span class="rules_heading">Original Zombies</span></div>
-            <div>The Original Zombies (typically 1-5) are randomly chosen at the beginning of the game. (You can opt-out if you want when you add yourself to the game, or go into your account settings). They identify as a Human for a few days (the Original Zombie period). This means that they wear the bandanna on their arm. They tote Nerf blasters, they carry socks, marshmallows, whatever. They can even stun Zombies if they want. For all intents and purposes, they are Human. Except that they can tag Humans to turn them into Zombies. At the end of the Original Zombie period, the Original Zombie becomes a normal Zombie, and must follow the Zombie Rules. If you do NOT receive an email from a mod informing you that you are an OZ, then you are NOT an OZ.</div>
-            <div>An email from the mods will be sent when the Original Zombie period ends.</div>
+            <div>The Original Zombies (typically 1-5) are randomly chosen at the beginning of the game. (You can opt-out if you want when you add yourself to the game, or go into your account settings). They identify as a Human for a few days (the Original Zombie period). This means that they wear the bandanna on their arm. They tote Nerf blasters, they carry socks, marshmallows, whatever. They can even stun Zombies if they want. For all intents and purposes, they are Human. Except that they can tag Humans to turn them into Zombies. At the end of the Original Zombie period, the Original Zombie becomes a normal Zombie, and must follow the Zombie Rules. During full missions (not mini-missions) OZ stun timers can be reset back to 15 minutes once 12 minutes (i.e. 3 minutes left to unstun) of their timer has elapsed. If you do NOT receive an email from a mod informing you that you are an OZ, then you are NOT an OZ.</div>
+            <div>Moderators can not be OZs. An email from the mods will be sent when the Original Zombie period ends.</div>
           </div>
 
           <div class="even">
             <div><span class="rules_heading">Nerf Devices and Projectiles</span></div>
             <div>The only Nerf devices allowed are:</div>
             <div><OL class="rules">
-              <LI>Nerf or other similar foam launching toy blasters (i.e. Buzzbee).
+              <LI>Nerf or other similar foam launching toy blasters (i.e. Buzzbee). No barrel attachments may be added to blasters.
+              <LI>The Centurion is banned for safety reasons. It has been indicated that it resembles a real gun.
               <LI>Blow guns firing nerf darts.  (Blow guns must be lung powered, and may not shoot velcro darts.)
               <LI>Balled up socks.
               <LI>Regular Marshmallows (No jumbo or mini).
@@ -223,10 +229,10 @@
               NO MEELE WEAPONS, NO EXCEPTIONS
             </UL></div>
         
-            <div>All blasters must be checked at orientatons. Nerf devices must not look realistic. Federal law requires that toy blasters have a brightly colored tip. We require blasters to be obviously brightly colored - if we think it's too realistic looking, it can't be used. If you're in doubt, ask a mod ahead of time. Please don't paint blasters completely black or other colors found on realistic weaponry. We'll have spray-paint at the orientations to help you make sure your nerf blasters meet standards. All devices except socks and marshmallows must be approved by a Moderator prior to use. Approved devices will be marked as such by a zip-tie.  Projectiles must not hurt on impact.</div>
+            <div>All blasters must be checked at orientatons. Nerf devices must not look realistic. Federal law requires that toy blasters have a brightly colored tip. We require blasters to be obviously brightly colored - if we think it's too realistic looking, it can't be used. If you're in doubt, ask a mod ahead of time. Please don't paint blasters completely black or other colors found on realistic weaponry. All devices except socks and marshmallows must be approved by a Moderator prior to use. Approved devices will be marked as such by a zip-tie.  Projectiles must not hurt on impact.</div>
             <div>Blasters may be modded. However, they must still fall under the aforementioned guidelines.</div>
             <div>Nerf blasters cannot fire anything except foam projectiles such as darts or balls. Socks must be clean. Socks must be thrown; they can be modified, but only by adding more socks.</div>
-            <div>Only commercially available, off-the-shelf darts may be used in nerf blasters. For safety reasons, darts may not be modified to affect their flight performance in any way.</div>
+            <div>Only commercially available, off-the-shelf darts may be used in nerf blasters. For safety reasons, darts may not be modified to affect their flight performance in any way. Exceptions may be made for expensive or hard-to find ammunition such as titan darts. In that case, all homemade ammunition must be individually approved by a moderator.</div>
             <div>All ammunition must be cleaned up by whoever fired it. Don't leave darts and marshmallows and socks lying around. Be respectful of campus - ours is a beautiful one, let's keep it that way.</div>
             <div>If a moderator says a Nerf device is not allowed, then it is not allowed. Moderators do not need to cite a rule to ban Nerf devices. If you have a problem with this, you can appeal to another moderator.</div>
             
@@ -266,8 +272,8 @@
                 </OL>
                 <LI>Bicycles: If you are straddled over the bike (moving or not), you are out of play. Simply walking the bike or standing one peddle on the side does NOT count.
                 <LI>Scooters: You are out of play when you are moving. If you are stationary you are in play.
-                <LI>Skateboards & Longboards: You are out of play while on one, moving or not.
-                <LI>Rollerskates & Rollerblades: You are out of play while they are on your feet. We ask players to please not use them during the game unless it is absolutely necessary.
+                <LI>Skateboards and Longboards: You are out of play while on one, moving or not.
+                <LI>Rollerskates and Rollerblades: You are out of play while they are on your feet. We ask players to please not use them during the game unless it is absolutely necessary.
                 <LI>Segways: If you are standing on one, you are out of play.
               </OL></div>
           </div>
@@ -293,7 +299,7 @@
             <div>Tagging non-players is a bannable offense. And a rude move. Don't do it.</div>
             <div>People who are not part of the game cannot interact with it. This includes spying or bringing supplies to barricaded Humans.</div>
             <div>Zombies must have both feet outside a safe zone to tag a Human.</div>
-            <div>If there is a dispute over a tag and or stun (i.e. a tag and stun happened at the same time), this is settled by way of rock, paper, siccsors. If a mod is near by we will officiate this. Winner best 2 out of 3.</div>
+            <div>If there is a dispute over a tag and or stun (i.e. a tag and stun happened at the same time), this is settled by way of rock, paper, scissors. If a mod is near by we will officiate this. Winner best 2 out of 3.</div>
             <div>Shields are not allowed. Neither are melee weapons.  A tag on a backpack is considered a tag on the player (otherwise the backpack would be a shield, which is not allowed).</div>
             <div>Athletes during practices or games are safe.</div>
             <div>Anyone participating in official or required events, such as jobs or meetings, is safe.</div>
