@@ -38,7 +38,9 @@
               // All is okay, go ahead and register the kill
               $zombie = '';
               $targetSecret = '';
+              $self_time = '';
               $feed1 = '';
+              $feed1_time = '';
               $feed2 = '';
               $location_x = '';
               $location_y = '';
@@ -60,11 +62,13 @@
                   $self_time = 0;
                 } else {
                   $self_time = intval($_POST['self_time'])*3600;
-                  $self_time = ( $self_time == 0 ? ZOMBIE_MAX_FEED_TIMER : $self_time);
+                  $self_time = ( $self_time == 0 ? time - $user_game['zombie_feed_timer'] : $self_time);
                 }
               }
                    
-              $GLOBALS['Game']->RegisterKill($GLOBALS['state']['gid'], $zombie, $targetSecret, $feed1, $feed2, $location_x, $location_y, $self_time);
+              if (isset($_POST['feed1_time'])) {$feed1_time = intval($_POST['feed1_time']) * 3600;}
+ 
+              $GLOBALS['Game']->RegisterKill($GLOBALS['state']['gid'], $zombie, $targetSecret, $feed1, $feed2, $location_x, $location_y, $self_time, $feed1_time);
               $error = false;
             }
             else
@@ -122,7 +126,11 @@
   
   <link href="//<?php echo DOMAIN; ?>/css/countdown.css" rel="stylesheet" type="text/css"/>
   <link href="//<?php echo DOMAIN; ?>/css/page/reportakill.css" rel="stylesheet" type="text/css"/>
+  <link href="//<?php echo DOMAIN; ?>/css/parsley.css" rel="stylesheet" type="text/css"/>
   
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/parsley.compare.js"></script>
+  <script src="js/parsley.remote.min.js"></script>
 </head>
 
 <body>
@@ -182,7 +190,7 @@
               <?php
                 if ($is_zombie)
                 {
-                  require 'module/reportakill_form.php';
+                  require 'module/reportakill_new.php';
                 }
               ?>
 
