@@ -737,6 +737,7 @@ class Game {
       $results = $GLOBALS['Db']->GetRecords($sql);
       $share = $results[0];
       $time_given = $feed1_time;
+      $time_given = ($time_given + $share['zombie_feed_timer'] > $time ? $time - $share['zombie_feed_timer'] : $time_given);
       $time_given = ($time_given > $feed_time ? $feed_time : $time_given);
       if ($share['share_optout']){$time_given = 0;} //user is trying to cheat
       if ($time_given > 0){
@@ -765,6 +766,7 @@ class Game {
       $results = $GLOBALS['Db']->GetRecords($sql);
       $share = $results[0];
       $time_given = $time - $share['zombie_feed_timer'];
+      $time_given = ($time_given + $share['zombie_feed_timer'] > $time ? $time - $share['zombie_feed_timer'] : $time_given);
       $time_given = ($time_given > $feed_time ? $feed_time : $time_given);
     
       if ($share['share_optout']){$time_given = 0;} //user is trying to cheat
