@@ -257,7 +257,7 @@ class Game {
     $results = $GLOBALS['Db']->GetRecords($sql);
     
 
-    $sql = "SELECT secret, used_by, expiration FROM feed_cards WHERE secret='$secret' AND gid='$gid'";
+    $sql = "SELECT secret, used_by, expiration, feedtime FROM feed_cards WHERE secret='$secret' AND gid='$gid'";
     $fcresults = $GLOBALS['Db']->GetRecords($sql);
 
     if (is_array($results) && count($results) > 0)
@@ -268,6 +268,7 @@ class Game {
         // Everything is good
         $return[0] = true;
         $return[1] = 'Success. You have just turned '.$results[0]['name'].' into a zombie! Your kill count has also been increased by one.';
+        $return[2] = ZOMBIE_KILL_TIME;
       }
       else
       {
@@ -321,6 +322,7 @@ class Game {
         } else {
           $return[0] = true;
           $return[1] = 'The feed card was sucessfully entered.';
+          $return[2] = $fcresults[0]['feedtime'];
         }
       }
       else
@@ -651,7 +653,7 @@ class Game {
   *
   *
   */
-  function RegisterKill($gid, $zombie_uid, $targetSecret, $feed1=null, $feed2=null, $location_x=null, $location_y=null, $self_time=ZOMBIE_MAX_FEED_TIMER)
+  function RegisterKill($gid, $zombie_uid, $targetSecret, $feed1=null, $feed2=null, $location_x=null, $location_y=null, $self_time=ZOMBIE_MAX_FEED_TIMER, $feed1_time=ZOMBIE_MAX_FEED_TIMER)
   {
     $zombie_uid = addslashes($zombie_uid);
     $targetSecret = strtolower(trim(addslashes($targetSecret)));
@@ -713,9 +715,8 @@ class Game {
     // update first feed
     $killer = $GLOBALS['User']->GetUserFromGame($zombie_uid);
     
-    $self_time = ($self_time > ZOMBIE_MAX_FEED_TIMER ? ZOMBIE_MAX_FEED_TIMER : $self_time);
-    $set_time = $time - (ZOMBIE_MAX_FEED_TIMER - $self_time);
-    $time_given = $set_time - $killer['zombie_feed_timer'];
+    $self_time = ($self_time + $killer['zombie_feed_timer'] > $time ? $time - $killer['zombie_feed_timer'] : $self_time);
+    $time_given = $self_time;
     $time_given = ($time_given > $feed_time ? $feed_time : $time_given); 
 
     if ($time_given > 0){
@@ -735,10 +736,10 @@ class Game {
 
       $results = $GLOBALS['Db']->GetRecords($sql);
       $share = $results[0];
-      $time_given = $time - $share['zombie_feed_timer'];
+      $time_given = $feed1_time;
       $time_given = ($time_given > $feed_time ? $feed_time : $time_given);
       if ($share['share_optout']){$time_given = 0;} //user is trying to cheat
-      if ($time_given >0){
+      if ($time_given > 0){
         $sql = "UPDATE game_xref SET zombie_feed_timer=zombie_feed_timer + $time_given WHERE gid='$gid' AND uid='$feed1'";
         if (!$GLOBALS['Db']->Execute($sql))
         {

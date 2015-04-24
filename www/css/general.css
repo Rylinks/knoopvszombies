@@ -267,6 +267,16 @@ input:active.button
   padding:        5px 10px 60px 10px;
 }
 
+.show
+{
+display: block;
+}
+
+.hidden
+{
+display:    none;
+visibility: hidden;
+}
 #footer_push, #footer
 {
   height:         100px;    
