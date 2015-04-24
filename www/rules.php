@@ -64,7 +64,7 @@
               <LI>Upon exiting a doorway, a 10 foot safe zone is established until exited, reentering a building, or when players (in the bubble or not) countdown 10 seconds outloud. Rules for entering doors has not changed. See doorway section for details.
               <LI>OZ timers can be reset after 12 minutes (i.e. 3 minutes until unstun) during full missions ONLY. Their total stun clock is still 15 minutes.
               <LI>New section on doorways.
-              <LI>Play zone boundaries have changed slightly from last game to reflect construction projects. <a href="http://goo.gl/ejjzmv">See map here</a>.
+              <LI>Play zone boundaries have changed slightly from last game to reflect construction projects. <a href="http://goo.gl/ejjzmv"><span class="accent_color">See map here</span></a>.
   
               
           </div>
