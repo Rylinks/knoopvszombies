@@ -34,6 +34,7 @@ RewriteRule ^orientations/([^/.]+)$ orientations.php?gid=$1 [L]
 
 RewriteRule ^report$ reportakill.php [L]
 RewriteRule ^report/submit$ reportakill.php?submit=true [L]
+RewriteRule ^checksecret$ checksecret.php [L]
 
 RewriteRule ^playerlist$ playerlist.php [L]
 
