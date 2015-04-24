@@ -733,10 +733,11 @@ class Game {
     if ($GLOBALS['User']->IsValidUser($feed1))
     {
       $sql = "SELECT game_xref.uid, game_xref.status, game_xref.zombie_feed_timer, game_xref.zombied_time, game_xref.share_optout, user.name FROM game_xref LEFT JOIN user ON game_xref.uid = user.uid WHERE user.uid='$feed1' AND gid='$gid'";
-
       $results = $GLOBALS['Db']->GetRecords($sql);
+      $feed1 = $GLOBALS['User']->GetUserFromGame($feed1);
       $share = $results[0];
       $time_given = $feed1_time;
+      $time_given = ($time_given + $feed1['zombie_feed_timer'] > $time ? $time - $feed1['zombie_feed_timer'] : $time_given);
       $time_given = ($time_given > $feed_time ? $feed_time : $time_given);
       if ($share['share_optout']){$time_given = 0;} //user is trying to cheat
       if ($time_given > 0){
