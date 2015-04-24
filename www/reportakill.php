@@ -181,16 +181,13 @@
               <p>Remember, every zombie must feed once every 60 hours otherwise they starve. You can share your kill with two other zombies. Your starve timer will be set to the number of hours you indicate (if you enter fewer hours than you currently have on your starve timer, you won't get any time at all). Remaining time from the kill will go to the first feed until they hit the maximum, and then any remaining time after that will go to the second feed. If the secret game ID you received does not work, contact a moderator. Secret Game IDs are <span class="bold">not</span> case sensitive.</p>
             </div>
 
-            <div class="reportakill_header">
-              <p>Optionally you may include where the kill occured. We may use this data at the end of the game to make an interesting kill "heat map".</p>
-            </div>
             
             <div class="reportakill_content">
 
               <?php
                 if ($is_zombie)
                 {
-                  require 'module/reportakill_new.php';
+                  require 'module/reportakill_form.php';
                 }
               ?>
 
