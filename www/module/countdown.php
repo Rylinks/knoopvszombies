@@ -120,7 +120,7 @@
     ?>
   -->
   </script>
-  <script type="text/javascript" src="js/countdown.js?<?php echo date("U"); ?>"></script>
+  <script type="text/javascript" src="//<?php echo DOMAIN; ?>/js/countdown.js?<?php echo date("U"); ?>"></script>
 
   </a>
 </div> <!-- group_countdown_container -->

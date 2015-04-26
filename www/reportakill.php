@@ -128,9 +128,8 @@
   <link href="//<?php echo DOMAIN; ?>/css/page/reportakill.css" rel="stylesheet" type="text/css"/>
   <link href="//<?php echo DOMAIN; ?>/css/parsley.css" rel="stylesheet" type="text/css"/>
   
-  <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="js/parsley.compare.js"></script>
-  <script src="js/parsley.remote.min.js"></script>
+  <script src="//<?php echo DOMAIN; ?>/js/jquery-1.11.2.min.js"></script>
+  <script src="//<?php echo DOMAIN; ?>/js/parsley.remote.min.js"></script>
 </head>
 
 <body>
