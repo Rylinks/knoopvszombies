@@ -713,7 +713,9 @@ class Game {
       $GLOBALS['Db']->Commit();
     }
     // update first feed
-    $killer = $GLOBALS['User']->GetUserFromGame($zombie_uid);
+    $sql = "SELECT game_xref.uid, game_xref.status, game_xref.zombie_feed_timer, game_xref.zombied_time, game_xref.share_optout, user.name FROM game_xref LEFT JOIN user ON game_xref.uid = user.uid WHERE user.uid='$zombie_uid' AND gid='$gid'";
+    $killer = $GLOBALS['Db']->GetRecords($sql);
+    $killer = $killer[0];
     
     $self_time = ($self_time + $killer['zombie_feed_timer'] > $time ? $time - $killer['zombie_feed_timer'] : $self_time);
     $time_given = $self_time;
@@ -750,7 +752,7 @@ class Game {
         $feed_time -= $time_given;
         $user=$GLOBALS['User']->GetUser($feed1);
         $email = $user['email']; 
-        $text = "Hello\r\nYou have recieved a feed share. You now starve out at ".
+        $text = "Hello\r\nYou have recieved a feed share from ".$killer['name'].". You now starve out at ".
                        date("Y-d-m H:i:s", $share['zombie_feed_timer'] + $time_given + ZOMBIE_MAX_FEED_TIMER);
         $GLOBALS['Mail']->SimpleMail($email, UNIVERSITY." HVZ Feed Share", $text);
         $cache_id = $feed1.'_game';
@@ -780,7 +782,7 @@ class Game {
         $feed_time -= $time_given;
         $user=$GLOBALS['User']->GetUser($feed2);
         $email = $user['email'];
-        $text = "Hello\r\nYou have recieved a feed share. You now starve out at ".
+        $text = "Hello\r\nYou have recieved a feed share from ".$killer['name'].". You now starve out at ".
                        date("Y-d-m H:i:s", $share['zombie_feed_timer'] + $time_given + ZOMBIE_MAX_FEED_TIMER);
         $GLOBALS['Mail']->SimpleMail($email, UNIVERSITY." HVZ Feed Share", $text);
         $cache_id = $feed2.'_game';
