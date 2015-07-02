@@ -25,37 +25,48 @@ class Mail {
    $mg_message_url = "https://".$mg_version.$mg_domain."/messages"; 
     // $to can be single email or comma seperated
       
-   $ch = curl_init();
-   curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-   curl_setopt($ch, CURLOPT_USERPWD, 'api:' . $mg_api);
-   curl_setopt($ch, CURLOPT_POST, true);
-   curl_setopt($ch, CURLOPT_URL, $mg_message_url);
-   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+   $emails = explode(',', $to);
+   $max_size = 500;
+   $sent = 0;
+
+   while ($sent < sizeof($emails)) {
+     $block = array_slice($emails, $sent, $max_size);
+     $to = implode(',', $block);
+     
+     $ch = curl_init();
+
+     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+     curl_setopt($ch, CURLOPT_USERPWD, 'api:' . $mg_api);
+     curl_setopt($ch, CURLOPT_POST, true);
+     curl_setopt($ch, CURLOPT_URL, $mg_message_url);
+     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       
-   $postfields = array(  'from'              => $mg_from,
-                         'h:Reply-To'        => '<' . $mg_reply_to_email . '>',
-                         'subject'           => $subject,
-                         'text'              => $body,
-                         'o:tracking-clicks' => 'no',
-            );
-      if ($bcc) {
-        $postfields["bcc"] = $to;
-        $postfields["to"]  = ARCHIVE_EMAIL;
-      } else {
-        $postfields["to"] = $to;
-      }
+     $postfields = array(  'from'              => $mg_from,
+                           'h:Reply-To'        => '<' . $mg_reply_to_email . '>',
+                           'subject'           => $subject,
+                           'text'              => $body,
+                           'o:tracking-clicks' => 'no',
+              );
+     if ($bcc) {
+       $postfields["bcc"] = $to;
+       $postfields["to"]  = ARCHIVE_EMAIL;
+     } else {
+       $postfields["to"] = $to;
+     }
 
-      if ($opt) {
-        foreach ($opt as $option => $value){
-        	$postfields[$option] = $value;
-        }
-      }
+     if ($opt) {
+       foreach ($opt as $option => $value){
+         $postfields[$option] = $value;
+       }
+     }
 
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
-      $result = curl_exec($ch);
-      curl_close($ch);
-      $res = json_decode($result,TRUE);
-      return $res;
+     curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+     $result = curl_exec($ch);
+     curl_close($ch);
+     $res = json_decode($result,TRUE);
+     $sent += $max_size;
+  }   
+  return $res;
     
   }
 

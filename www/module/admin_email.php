@@ -4,24 +4,34 @@
       // validate mail, send it
       if ((isset($_POST['send_addresses']) && $_POST['send_addresses'] != '') && (isset($_POST['email_subject']) && $_POST['email_subject'] != '') && (isset($_POST['email_body']) && $_POST['email_body'] != ''))
       {
-        $to = $_POST['send_addresses'];
+        $addresses = $_POST['send_addresses'];
         $subject = $_POST['email_subject'];
         $body = $_POST['email_body'];
+        $emails = explode(',', $addresses);
+        $max_size = 500;
+        $sent = 0;
         
-        $send_error = null;
-        try
-        {
-          $attachFooter = false;
-          $bcc = true;
+        while ($sent < sizeof($emails)) {
+          $block = array_slice($emails, $sent, $max_size);
+          $to = implode(',', $block);
           
-          $opt = false;
-          if (isset($_POST['campaign'])) {$opt = array('o:campaign' => 'c5rxu',);}
+          $send_error = null;
+          try
+          {
+            $attachFooter = false;
+            $bcc = true;
           
-          $GLOBALS['Mail']->SimpleMail($to, $subject, $body, $attachFooter, $bcc, $opt);
-        }
-        catch (Exception $e)
-        {
-          $send_error = $e->getMessage();
+            $opt = false;
+            if (isset($_POST['campaign'])) {$opt = array('o:campaign' => 'c5rxu',);}
+          
+            $GLOBALS['Mail']->SimpleMail($to, $subject, $body, $attachFooter, $bcc, $opt);
+          }
+          catch (Exception $e)
+          {
+            $send_error = $e->getMessage();
+          }
+
+          $sent += $max_size;
         }  
       }
       
