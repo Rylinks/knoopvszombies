@@ -1441,6 +1441,27 @@ class User {
   }
   
   /*
+  * Returns bool whether user has unregistered games
+  */
+  function HasUnregisteredGames($uid)
+  {
+    $sql = "SELECT gid from game WHERE registration_open = 1 AND archive = 0";
+    $results = $GLOBALS['Db']->GetRecords($sql);
+
+    foreach ($results as $result) {
+      $gid = $result['gid'];
+
+      $sql = "SELECT uid FROM game_xref WHERE gid='$gid' AND uid='$uid'";
+      $res = $GLOBALS['Db']->GetRecords($sql);
+      if (!is_array($res) || count($res) == 0) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+  
+  /*
   * Takes an fb uid and sees if the user is already linked to a profile in database
   *
   */
