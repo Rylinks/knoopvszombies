@@ -14,7 +14,7 @@
       </span>
       <?php endif ?>
 
-      <?php if ($_SESSION && !$GLOBALS['User']->IsPlayingCurrentGame($_SESSION['uid']) && $account_complete): ?>
+      <?php if ($_SESSION && $GLOBALS['User']->HasUnregisteredGames($_SESSION['uid']) && $account_complete): ?>
       <span class="body_header_nav_option">
         <a class="body_header_navigation" href="http://<?php echo DOMAIN; ?>/joingame">Join a Game</a>
       </span>
