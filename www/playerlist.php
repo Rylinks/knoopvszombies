@@ -244,7 +244,9 @@
                       ?>"></img></a>
                     </td>
                     <td class="playerlist_table_cell">
-                      <a href="//<?php echo DOMAIN; ?>/account/<?php echo $player['uid']; ?>" class="accent_color"><?php echo $player['name']; ?></a>
+                      <a href="//<?php echo DOMAIN; ?>/account/<?php echo $player['uid']; ?>" class="accent_color">
+                                      <?php if ($player['admin']) {echo "<span class='admin'>".$player['name']."</span>";}
+                                         else {echo $player['name'];} ?></a>
                     </td>
                     <td class="playerlist_table_cell">
                       <?php echo $player['squad_name']; ?>

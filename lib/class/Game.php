@@ -627,7 +627,8 @@ class Game {
               u.fb_id, 
               u.using_fb,
               u.fb_image,
-              u.squad_name
+              u.squad_name,
+              u.admin
             FROM game_xref gx LEFT JOIN user u ON gx.uid = u.uid
             WHERE gid='$gid'
             $filterSql
