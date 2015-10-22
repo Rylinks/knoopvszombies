@@ -105,7 +105,7 @@
                 
               <?php else: ?>
                 <tr class="orient_table_row_noplayers">
-                  <td colspan="5" class="orient_table_cell table_cell_center">There are no orientations to display (dates still undecided).</td>
+                  <td colspan="5" class="orient_table_cell table_cell_center">Due to uncertain room availibility, we must schedule orientations on short notice. There will be orientations during the week before the game. If you want to play, we will make sure you are oriented! You will get an email once we've managed to finalize the times and locations.</td>
                 </tr>
               <?php endif ?>
               
