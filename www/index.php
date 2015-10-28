@@ -145,7 +145,7 @@
             <p>Not convinced yet? Check out the trailer:</p>
             
             <div id="what_is_video">
-            <object width="370" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><iframe width="370" height="208" src="https://www.youtube.com/embed/R_mONwFxACE" frameborder="0" allowfullscreen></iframe></object>
+            <object width="370" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><iframe width="370" height="208" src="https://www.youtube.com/embed/F4QTOnQtmbk" frameborder="0" allowfullscreen></iframe></object>
             </div>
             
             <p>(note: we recommend watching it full screen)</p>
