@@ -109,7 +109,7 @@
   <?php endif ?>
   <div class="content_row">
     <div class="content_row_label">
-      Lifetime kills as zombie:
+      Lifetime tags as zombie:
     </div>
     <div class="content_row_data">
       <?php echo $view_zombie_kills ?>

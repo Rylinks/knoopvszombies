@@ -118,7 +118,7 @@
               {
                 $save[$key] = $value;
                 if ($user_game[$key] != $value)
-                  $email_changes['Zombie Kills'] = $value;
+                  $email_changes['Zombie Tags'] = $value;
               }
               break;
               
@@ -128,13 +128,13 @@
                 $save[$key] = $value;
                 $killed_by_user = $GLOBALS['User']->GetUser($value);
                 if ($user_game[$key] != $value)
-                  $email_changes['Killed By'] = $killed_by_user['name'];
+                  $email_changes['Tagged By'] = $killed_by_user['name'];
               }
               elseif ($value == '0')
               {
                 $save[$key] = $value;
                 if ($user_game[$key] != $value)
-                  $email_changes['Killed By'] = '(no one)';
+                  $email_changes['Tagged By'] = '(no one)';
               }
               break;
               
@@ -147,14 +147,14 @@
                 {
                   $save[$key] = $test_value;                
                     if ($user_game[$key] != $test_value)
-                      $email_changes['Killed Time'] = date('Y-m-d H:i:s', $test_value);
+                      $email_changes['Tag Time'] = date('Y-m-d H:i:s', $test_value);
                 }
               }
               if ($value == '0000-00-00 00:00:00')
               {
                 $save[$key] = '0';
                   if ($user_game[$key] != '0')
-                    $email_changes['Killed Time'] = '(no kill time)';
+                    $email_changes['Tag Time'] = '(no kill time)';
               }
               break;
               
@@ -209,11 +209,11 @@
               {
                 if ($value)
                 {
-                  $email_changes['Kill Sharing Optout'] = 'Yes';
+                  $email_changes['Tag Sharing Optout'] = 'Yes';
                 }
                 else
                 {
-                  $email_changes['Kill Sharing Optout'] = 'No';
+                  $email_changes['Tag Sharing Optout'] = 'No';
                 }
               }
               break;

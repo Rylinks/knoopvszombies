@@ -1,6 +1,6 @@
 <?php
 
-  $page_title = 'Report a Kill';
+  $page_title = 'Report a Tag';
   $require_login = true;
   
   require '../knoopvszombies.ini.php';
@@ -163,7 +163,7 @@
           <div id="reportakill_container">
           
             <div class="reportakill_title">
-              Report a <span class="accent_color">Kill</span>
+              Report a <span class="accent_color">Tag</span>
             </div>
 
             <?php if ((isset($_GET['submit']) && $_GET['submit'] == 'true') || $error): ?>
@@ -177,7 +177,7 @@
             </div>
                        
             <div class="reportakill_header">
-              <p>Remember, every zombie must feed once every 60 hours otherwise they starve. You can share your kill with two other zombies. If the secret game ID you received does not work, contact a moderator. Secret Game IDs are <span class="bold">not</span> case sensitive.</p>
+              <p>Remember, every zombie must feed once every 60 hours otherwise they starve. You can share with two other zombies. If the secret game ID you received does not work, contact a moderator. Secret Game IDs are <span class="bold">not</span> case sensitive.</p>
             </div>
 
             

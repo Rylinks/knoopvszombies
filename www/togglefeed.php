@@ -62,7 +62,7 @@
             </div>
 
             <div class="squad_header">
-              <p>Change whether other people are able to share feeds with you. After the game starts, you can only switch from not accepting feeds to accepting feeds. You are always able to share your own kills with others.
+              <p>Change whether other people are able to share feeds with you. After the game starts, you can only switch from not accepting feeds to accepting feeds. You are always able to share with others.
             </div>
             
             <div class="squad_content">

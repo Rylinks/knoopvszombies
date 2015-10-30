@@ -28,7 +28,7 @@
       
       <?php if ($GLOBALS['state'] && $GLOBALS['state']['active'] && $_SESSION && $GLOBALS['User']->IsPlayingCurrentGame($_SESSION['uid']) && $account_complete): ?>
       <span class="body_header_nav_option">
-        <a class="body_header_navigation" href="http://<?php echo DOMAIN; ?>/report">Report a Kill</a>
+        <a class="body_header_navigation" href="http://<?php echo DOMAIN; ?>/report">Report a Tag</a>
       </span>
       <?php endif ?>
       

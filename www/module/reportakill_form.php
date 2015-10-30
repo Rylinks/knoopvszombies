@@ -98,7 +98,7 @@ $(document).ready(function () {
 </script> 
   <div class="step2 hidden">
   <div class="reportakill_row">
-    <div class="reportakill_label">Total kill time: <a id="time1">??</a> hours</div>
+    <div class="reportakill_label">Total feed time: <a id="time1">??</a> hours</div>
   </div>
   <div class="clearfix"></div>
   <div class="reportakill_row">
@@ -140,7 +140,7 @@ $(document).ready(function () {
                   $hours_left = ceil(($starve_time - $now) / (60*60));
                   $kills = $player['zombie_kills'];
                   
-                  echo "<option value='{$player['uid']}'>{$player['name']} ($hours_left hours left, $kills kills)</option>";
+                  echo "<option value='{$player['uid']}'>{$player['name']} ($hours_left hours left, $kills tags)</option>";
                 }
               }
             }
@@ -191,7 +191,7 @@ $(document).ready(function () {
                   $hours_left = ceil(($starve_time - $now) / (60*60));
                   $kills = $player['zombie_kills'];
 
-                  echo "<option value='{$player['uid']}'>{$player['name']} ($hours_left hours left, $kills kills)</option>";
+                  echo "<option value='{$player['uid']}'>{$player['name']} ($hours_left hours left, $kills tags)</option>";
                 }
               }
             }
@@ -210,7 +210,7 @@ $(document).ready(function () {
   
   <div class="reportakill_row">
     <span class="next btn btn-info pull-left" data-current-block="4" data-next-block="3">&lt; Previous</span>
-    <input type="submit" value="Report Kill" class="btn btn-default pull-right" />
+    <input type="submit" value="Report Tag" class="btn btn-default pull-right" />
     <div class="clearfix"></div>
   </div>
   </div> 

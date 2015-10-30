@@ -166,7 +166,7 @@
                   <select class="playerlist_display_options_select" name="sortBy">
                     <option value="name" <?php if (isset($sortBy) && $sortBy == 'name') echo "selected"; ?> >Name</option>
                     <option value="squad" <?php if (isset($sortBy) && $sortBy == 'squad') echo "selected"; ?> >Squad Name</option>
-                    <option value="kills" <?php if (isset($sortBy) && $sortBy == 'kills') echo "selected"; ?> >Kills</option>
+                    <option value="kills" <?php if (isset($sortBy) && $sortBy == 'kills') echo "selected"; ?> >Tags</option>
                     <option value="starve_time" <?php if (isset($sortBy) && $sortBy == 'starve_time') echo "selected"; ?> >Starve Time</option>
                   </select>
                 </div>
@@ -223,7 +223,7 @@
                 <td class="playerlist_table_cell playerlist_table_cell_name">Name</td>
                 <td class="playerlist_table_cell playerlist_table_cell_squad">Squad</td>
                 <td class="playerlist_table_cell playerlist_table_cell_status">Status</td>
-                <td class="playerlist_table_cell playerlist_table_cell_zombiekills">Kills as Zombie</td>
+                <td class="playerlist_table_cell playerlist_table_cell_zombiekills">Tags as Zombie</td>
                 <td class="playerlist_table_cell playerlist_table_cell_lastfeed"dt>Starve Time</td>
               </tr>
               
